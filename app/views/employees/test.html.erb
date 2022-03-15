@@ -1,0 +1,23 @@
+<h1> Add Assets</h1>
+ <% form_with model: [@employee, @employee.assets.build ] do |form| %>
+ <p>
+ 	<%= form.label :Product_Name %><br>
+ 	<%= form.text_field :product_name %>
+ </p>
+ <p>
+ 	<%= form.label :Company_name %><br>
+ 	<%= form.text_field :company_name %>
+ </p>
+ <p>
+ 	<%= form.label :Specification %><br>
+ 	<%= form.text_field :specification %>
+ </p>
+ <p>
+ 	<%= form.label :serial_number %><br>
+ 	<%= form.text_field :serial_number %>
+ </p>
+ <p>
+ 	<%= form.submit%>
+ </p>
+
+ <% end %>

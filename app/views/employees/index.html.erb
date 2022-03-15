@@ -1,0 +1,17 @@
+<h1 class="text-center"> Employee<span class="text-white"> Deshboard</span></h1>
+<%= render partial: "search_bar/form" %>
+
+<!-- **************** -->
+<ul>
+	<% Employee.all.each do |employee| %>
+
+    <li>
+      <%= link_to employee.first_name, employee %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'New Employees', new_employee_path, class: "btn btn-danger"%>
+
+
+
+

@@ -1,0 +1,49 @@
+
+<%= form_with model: @employee do |form| %>
+	<div>
+		<%= form.label "Profile Picture" %><br>
+		<%= form.file_field :image %>
+	</div><br>
+	<div class="align-center">
+		<%= form.label :First_name %><br>
+		<%= form.text_field :first_name %>
+	</div>
+	<div>
+		<%= form.label :Last_name %><br>
+		<%= form.text_field :last_name %>
+	</div>
+
+	<div>
+		<%= form.label :Role %><br>
+		<%= form.text_field :role %>
+	</div>
+
+	<div>
+		<%= form.label :Gender %><br>
+		<%= form.text_field :gender %>
+	</div>
+	<div>
+		<%= form.label :Joining_date %><br>
+		<%= form.text_field :joining_date %>
+	</div>
+	<div>
+		<%= form.label :Mobile_No %><br>
+		<%= form.text_field :mobile_no %>
+	</div>
+	<div>
+		<%= form.label :Address %><br>
+		<%= form.text_field :address %>
+	</div>
+	<div>
+		<%= form.label :City %><br>
+		<%= form.text_field :city %>
+	</div>
+	<div>
+		<%= form.label :Pincode %><br>
+		<%= form.text_field :pincode %>
+	</div><br>
+	<div>
+	<%=form.submit "submit",class: "btn btn-warning"%>
+	<%= link_to "Back", employees_path,class: "btn btn-danger"%>
+	</div>
+<% end %> 

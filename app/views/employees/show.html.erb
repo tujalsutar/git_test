@@ -1,0 +1,66 @@
+<%#= @employee.first_name %>
+<div class="container">
+
+ <!-- *************************** -->
+ <table class="table table-light">
+  <thead>
+    <tr>
+      	<th scope="col">Profile picture</th>
+      	<th scope="col">Employee id</th>
+      	<th scope="col">First Name</th>
+     	 <th scope="col">Last Name</th>
+     	 <th scope="col"> Role</th>
+		<th scope="col"> Gender</th>
+		<th scope="col">Joining Date</th>
+		<th scope="col"> Mobile No</th>
+		<th scope="col"> Address</th>
+		<th scope="col"> City</th>
+		<th scope="col">Pin Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      	 <!-- <%= image_tag(@employee.image)if @employee.image.attached? %> -->
+
+      	<td><%= image_tag @employee.image, :size =>"100", class: "rounded-circle "%></td>
+      	<td><%= @employee.id %></td>
+		<td><%= @employee.first_name %></td>
+		<td><%= @employee.last_name %></td>
+		<td><%= @employee.role %></td>
+		<td><%= @employee.gender %></td>
+			<td><%= @employee.joining_date %></td>
+
+		<td><%= @employee.mobile_no %></td>
+		<td><%= @employee.address%></td>
+		<td><%= @employee.city %></td>
+		<td><%= @employee.pincode %></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+
+
+
+
+ <!-- +++++++++++++++++++++++++ -->
+</div>
+
+<div class=" container text-align center">
+ <%= link_to "Edit",  edit_employee_path(@employee), class: "btn btn-primary"  %>
+  <%= link_to "Destroy", employee_path(@employee), :method => :delete,class: "btn btn-danger", data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+
+                  <%= link_to "Back", employees_path,class: "btn btn-warning"%><br>
+</div>
+
+
+<%#= link_to "Assets", test_assets_path %>
+
+
+<!-- <p>
+<%#= image_tag @employee.image, :size =>"100" %>
+</p> -->
